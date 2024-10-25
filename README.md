@@ -10,6 +10,7 @@ Estrutura de Projeto Next.js 14
 Ao criar um novo projeto Next.js, a estrutura de diretórios geralmente se parece com isto:
 
 my-nextjs-app/
+
 ├── app/
 │   ├── page.js
 │   ├── layout.js
