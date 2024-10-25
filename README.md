@@ -6,11 +6,46 @@ Esta POC tem como objetivo explicar o funcionamento dos seguintes conceitos de R
 -Criação de componentes simples (sem estado)
 -Estilo CSS (global e módulo). 
 
-Estrutura de Projeto Next.js 14
-Ao criar um novo projeto Next.js, a estrutura de diretórios geralmente se parece com isto:
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Next.js 14</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        code {
+            background-color: #eaeaea;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        pre {
+            background-color: #eaeaea;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
 
+    <h1>Guia de Next.js 14: Estrutura de Projeto, Componentes e Estilos</h1>
+
+    <p>Este repositório contém um exemplo básico de como estruturar um projeto utilizando Next.js 14 ou superior, além de explicar a criação de componentes simples e a aplicação de estilos em CSS, tanto globais quanto em módulos.</p>
+
+    <h2>Estrutura de Projeto Next.js 14</h2>
+    <p>Ao criar um novo projeto Next.js, a estrutura de diretórios geralmente se parece com isto:</p>
+
+    <pre>
+<code>
 my-nextjs-app/
-
 ├── app/
 │   ├── page.js
 │   ├── layout.js
@@ -25,18 +60,25 @@ my-nextjs-app/
 ├── package.json
 ├── next.config.js
 └── ...
+</code>
+    </pre>
 
-#Principais Diretórios
-app/: Contém a estrutura de páginas e componentes da aplicação.
-public/: Armazena arquivos estáticos, como imagens.
-styles/: Local onde você pode colocar arquivos CSS globais e módulos CSS.
-Criação de Componentes Simples (sem estado)
-Exemplo: Componente de Card
-Vamos criar um componente que exibe informações sobre um produto, chamado Card.
+    <h3>Principais Diretórios</h3>
+    <ul>
+        <li><strong>app/</strong>: Contém a estrutura de páginas e componentes da aplicação.</li>
+        <li><strong>public/</strong>: Armazena arquivos estáticos, como imagens.</li>
+        <li><strong>styles/</strong>: Local onde você pode colocar arquivos CSS globais e módulos CSS.</li>
+    </ul>
 
-Crie um arquivo chamado Card.js dentro da pasta app/components/:
+    <h2>Criação de Componentes Simples (sem estado)</h2>
 
+    <h3>Exemplo: Componente de Card</h3>
+    <p>Vamos criar um componente que exibe informações sobre um produto, chamado <code>Card</code>.</p>
 
+    <p>Crie um arquivo chamado <code>Card.js</code> dentro da pasta <code>app/components/</code>:</p>
+
+    <pre>
+<code>
 // app/components/Card.js
 import styles from '../styles/Card.module.css';
 
@@ -48,10 +90,14 @@ export default function Card({ title, description }) {
     </div>
   );
 }
-#Utilização do Componente
-Você pode usar o componente Card em uma página:
+</code>
+    </pre>
 
+    <h3>Utilização do Componente</h3>
+    <p>Você pode usar o componente <code>Card</code> em uma página:</p>
 
+    <pre>
+<code>
 // app/page.js
 import Card from './components/Card';
 
@@ -64,13 +110,16 @@ export default function HomePage() {
     </main>
   );
 }
+</code>
+    </pre>
 
+    <h2>Estilo CSS (global e módulo)</h2>
 
-#Estilo CSS (global e módulo)
-CSS Global
-Para aplicar estilos globais, crie um arquivo chamado globals.css na pasta styles/:
+    <h3>CSS Global</h3>
+    <p>Para aplicar estilos globais, crie um arquivo chamado <code>globals.css</code> na pasta <code>styles/</code>:</p>
 
-Copiar código
+    <pre>
+<code>
 /* styles/globals.css */
 body {
   margin: 0;
@@ -82,9 +131,13 @@ h1 {
   color: #333;
   text-align: center;
 }
-Para usar os estilos globais, importe o arquivo no arquivo layout.js:
+</code>
+    </pre>
 
-Copiar código
+    <p>Para usar os estilos globais, importe o arquivo no arquivo <code>layout.js</code>:</p>
+
+    <pre>
+<code>
 // app/layout.js
 import './globals.css';
 
@@ -95,13 +148,14 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+</code>
+    </pre>
 
+    <h3>CSS Módulo</h3>
+    <p>Para estilizar o componente <code>Card</code>, crie um arquivo CSS chamado <code>Card.module.css</code>:</p>
 
-#CSS Módulo
-Para estilizar o componente Card, crie um arquivo CSS chamado Card.module.css:
-
-
-Copiar código
+    <pre>
+<code>
 /* styles/Card.module.css */
 .card {
   background-color: white;
@@ -115,10 +169,14 @@ Copiar código
 .card h2 {
   color: #0070f3;
 }
+</code>
+    </pre>
 
+    <h3>Aplicando CSS Módulo</h3>
+    <p>O CSS módulo já está importado no componente <code>Card</code>, então as classes serão aplicadas automaticamente.</p>
 
-#Conclusão
-Nessa POC, apresentamos uma estrutura básica de projeto Next.js 14, a criação de componentes simples e a aplicação de estilos globais e em módulos. 
+    <h2>Conclusão</h2>
+    <p>Neste guia, apresentamos uma estrutura básica de projeto Next.js 14, a criação de componentes simples e a aplicação de estilos globais e em módulos. Sinta-se à vontade para explorar e expandir este projeto conforme suas necessidades!</p>
 
-
-
+</body>
+</html>
