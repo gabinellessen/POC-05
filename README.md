@@ -131,4 +131,3 @@ O CSS módulo já está importado no componente **Card**, então as classes ser�
 
 ### Conclusão
 Neste guia, apresentamos uma estrutura básica de projeto Next.js 14, a criação de componentes simples e a aplicação de estilos globais e em módulos. Sinta-se à vontade para explorar e expandir este projeto conforme suas necessidades!
-```
